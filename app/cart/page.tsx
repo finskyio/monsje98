@@ -55,7 +55,7 @@ export default function CartPage() {
       <div className="mb-4">
         <Link
           href="/shop"
-          className="flex gap-1 items-center text-md tracking-tighter mb-8 bg-gradient-to-r from-[#d9d9d9ae] to-[#e6e6e6a1] rounded-[10px] p-2 text-black/70 hover:bg-gradient-to-r hover:from-[#d9d9d9] hover:to-[#e6e6e6] hover:text-black transition duration-600 ease-in-out lg:max-w-[10%] max-w-[20%]"
+          className="flex gap-1 items-center text-md tracking-tighter mb-8 bg-gradient-to-r from-[#d9d9d9ae] to-[#e6e6e6a1] rounded-[10px] p-2 text-black/70 hover:bg-gradient-to-r hover:from-[#d9d9d9] hover:to-[#e6e6e6] hover:text-black transition duration-600 ease-in-out lg:max-w-[10%] max-w-[40%]"
         >
           <Image src="/backicon.svg" alt="Icon 1" width={20} height={20} />
           <h4 className="m-0 leading-none">Back shop</h4>
