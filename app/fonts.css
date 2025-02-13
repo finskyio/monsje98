@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Regular';
+  src: url('/fonts/AloeveraDisplay-Regular.otf') format('opentype');
+  font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: 'Helvetica-Medium';
+  src: url('/fonts/helveticanowdisplay-medium.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica-Bold';
+  src: url('/fonts/helveticanowdisplay-bold.ttf') format('truetype');
+  font-display: swap;
+}
