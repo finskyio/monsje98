@@ -24,7 +24,7 @@ interface Product {
   image: {
     src: string;
     hover: string;
-    id?: string; 
+    id?: string;
   };
   short: string;
   description: string;
@@ -112,7 +112,6 @@ export default function ProductPage() {
 
   const handleToggleDescription = () => {
     if (!isExpanded) {
-     
       setShowFullContent(true);
       setIsExpanded(true);
     } else {
@@ -203,10 +202,11 @@ export default function ProductPage() {
                   alt={product.name}
                   className="absolute top-0 left-0 w-full h-full object-cover"
                 />
-                <img
+                <Image
                   src={`/products/${product.image.hover}.jpg`}
                   alt={`${product.name} Hover`}
-                  className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-1000 ease-out"
+                  fill
+                  className="absolute top-0 left-0 object-cover transition-transform duration-1000 ease-out"
                   style={{
                     transform: `translateY(${(1 - scrollProgress) * 100}%)`,
                   }}
@@ -311,20 +311,22 @@ export default function ProductPage() {
                 </h4>
               </div>
               <div className="flex gap-2 items-center justify-center lg:justify-normal mb-4">
-  <h4 className="text-md tracking-tight text-black/80">No problem,</h4>
-  <Link
-    href="/shop"
-    className="flex gap-1 items-center text-md tracking-tighter bg-gradient-to-r from-[#d9d9d9ae] to-[#e6e6e6a1] rounded-[10px] p-2 text-black/70 hover:bg-gradient-to-r hover:from-[#d9d9d9] hover:to-[#e6e6e6] hover:text-black transition duration-600 ease-in-out"
-  >
-    <Image src="/backicon.svg" alt="Icon 1" width={20} height={20} />
-    <h4 className="leading-none">Back shop</h4>
-  </Link>
-</div>
+                <h4 className="text-md tracking-tight text-black/80">
+                  No problem,
+                </h4>
+                <Link
+                  href="/shop"
+                  className="flex gap-1 items-center text-md tracking-tighter bg-gradient-to-r from-[#d9d9d9ae] to-[#e6e6e6a1] rounded-[10px] p-2 text-black/70 hover:bg-gradient-to-r hover:from-[#d9d9d9] hover:to-[#e6e6e6] hover:text-black transition duration-600 ease-in-out"
+                >
+                  <Image src="/backicon.svg" alt="Icon 1" width={20} height={20} />
+                  <h4 className="leading-none">Back shop</h4>
+                </Link>
+              </div>
 
               <div className="items-center text-center">
                 <button
                   onClick={handleProceedToPayment}
-                  className=" text-md tracking-tight mb-2 bg-gradient-to-r from-[#BFD962] to-[#DEF2B3] rounded-[10px] p-2 text-black/70 hover:bg-gradient-to-r hover:from-[#b6d058] hover:to-[#d1f08e] hover:text-black transition duration-600 ease-in-out"
+                  className="text-md tracking-tight mb-2 bg-gradient-to-r from-[#BFD962] to-[#DEF2B3] rounded-[10px] p-2 text-black/70 hover:bg-gradient-to-r hover:from-[#b6d058] hover:to-[#d1f08e] hover:text-black transition duration-600 ease-in-out"
                 >
                   Proceed to payment
                 </button>
@@ -342,7 +344,9 @@ export default function ProductPage() {
         </h4>
         <div className="grid grid-cols-3 gap-4 p-2 lg:p-0">
           <div className="flex flex-col">
-            <h4 className="lg:text-2xl text-xl  tracking-tighter mb-8">Ingredients</h4>
+            <h4 className="lg:text-2xl text-xl tracking-tighter mb-8">
+              Ingredients
+            </h4>
             <ul className="list-disc marker:text-[#848484] text-xs lg:text-sm tracking-tight max-w-[60%] space-y-1 justify-center">
               {product.ingredients.map((x, index) => (
                 <li key={index}>{x}</li>
@@ -358,7 +362,9 @@ export default function ProductPage() {
             </ul>
           </div>
           <div className="flex flex-col">
-            <h4 className="lg:text-2xl text-xl tracking-tighter mb-8">How to apply</h4>
+            <h4 className="lg:text-2xl text-xl tracking-tighter mb-8">
+              How to apply
+            </h4>
             <ul className="list-disc marker:text-[#848484] text-xs lg:text-sm tracking-tight max-w-[80%] space-y-1 justify-center">
               {product.application.map((x, index) => (
                 <li key={index}>{x}</li>

@@ -2,14 +2,20 @@ import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2025-01-27.acacia", 
+  apiVersion: "2025-01-27.acacia",
 });
+
+interface CheckoutItem {
+  name: string;
+  price: number;
+  quantity: number;
+}
 
 export async function POST(request: Request) {
   try {
-    const { items } = await request.json();
+    const { items } = (await request.json()) as { items: CheckoutItem[] };
 
-    const line_items = items.map((item: any) => ({
+    const line_items = items.map((item) => ({
       price_data: {
         currency: "eur",
         product_data: {

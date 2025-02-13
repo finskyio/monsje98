@@ -8,9 +8,6 @@ const ExpandingText: React.FC = () => {
   const acceleratedProgress = useTransform(scrollYProgress, [0, 0.4], [0, 2]);
   const scale = useTransform(acceleratedProgress, [0, 1], [0.1, 10]);
   const smoothScale = useSpring(scale, { stiffness: 2000, damping: 30 });
-  const opacity = useTransform(scrollYProgress, [0.45, 0.5], [0, 1]);
-  const y = useTransform(scrollYProgress, [0.45, 0.5], [20, 0]);
-  const blur = useTransform(scrollYProgress, [0.45, 0.5], ['4px', '0px']);
 
   return (
     <div style={{ height: '200vh' }}>
@@ -22,41 +19,37 @@ const ExpandingText: React.FC = () => {
           width: '100%',
           height: '100vh',
           display: 'flex',
-          flexDirection: 'column', 
+          flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
         }}
       >
         <motion.h4
           style={{
-            scale: smoothScale, 
+            scale: smoothScale,
             originX: 0.5,
             originY: 0.5,
             fontSize: '1rem',
             letterSpacing: '-0.05em',
             margin: 0,
             height: '0.5em',
-            
           }}
         >
           M98
         </motion.h4>
         <motion.h4
           style={{
-            scale: smoothScale, 
+            scale: smoothScale,
             originX: 0.5,
             originY: 0.5,
             fontSize: '1rem',
             letterSpacing: '-0.05em',
             margin: 0,
             marginTop: '150px',
-     
-            
           }}
         >
           philosophy
         </motion.h4>
-       
       </div>
     </div>
   );

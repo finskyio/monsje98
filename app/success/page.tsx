@@ -10,7 +10,7 @@ export default function SuccessPage() {
         Payment Successful!
       </h1>
       <p className="text-sm tracking-tight mb-6 ">
-        Thank you for your purchase. (Note: This page is part of my portfolio – so don't take it too seriously!)
+        Thank you for your purchase. (Note: This page is part of my portfolio – so don&apos;t take it too seriously!)
       </p>
       <Link
         href="/shop"

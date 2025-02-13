@@ -78,9 +78,11 @@ export default function CartPage() {
             >
               <Link href={`/shop/${slugify(item.name)}`}>
                 <div className="w-24 h-24 flex items-center justify-center flex-shrink-0">
-                  <img
+                  <Image
                     src={`/products/${item.image.src}.jpg`}
                     alt={item.name}
+                    width={96}
+                    height={96}
                     className="object-cover w-full h-full rounded-md"
                   />
                 </div>

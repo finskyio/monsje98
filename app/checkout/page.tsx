@@ -77,22 +77,18 @@ export default function CheckoutPage() {
   return (
     <div className="max-w-screen-lg mx-auto py-8 px-4">
       <div className="mb-4">
-      <Link
-    href="/shop"
-    className="flex gap-1 items-center text-md tracking-tighter bg-gradient-to-r from-[#d9d9d9ae] to-[#e6e6e6a1] rounded-[10px] p-2 text-black/70 hover:bg-gradient-to-r hover:from-[#d9d9d9] hover:to-[#e6e6e6] hover:text-black transition duration-600 ease-in-out lg:max-w-[10%] max-w-[40%]"
-  >
-    <Image
-      src="/backicon.svg"
-      alt="Icon 1"
-      width={20}
-      height={20}
-    />
-    <h4 className="m-0 leading-none">Back shop</h4>
-  </Link>
+        <Link
+          href="/shop"
+          className="flex gap-1 items-center text-md tracking-tighter bg-gradient-to-r from-[#d9d9d9ae] to-[#e6e6e6a1] rounded-[10px] p-2 text-black/70 hover:bg-gradient-to-r hover:from-[#d9d9d9] hover:to-[#e6e6e6] hover:text-black transition duration-600 ease-in-out lg:max-w-[10%] max-w-[40%]"
+        >
+          <Image src="/backicon.svg" alt="Icon 1" width={20} height={20} />
+          <h4 className="m-0 leading-none">Back shop</h4>
+        </Link>
       </div>
 
-
-      <h4 className="text-5xl text-center tracking-tighter lg:mb-6 mb-12 ">Checkout</h4>
+      <h4 className="text-5xl text-center tracking-tighter lg:mb-6 mb-12">
+        Checkout
+      </h4>
       {state.items.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
@@ -102,12 +98,13 @@ export default function CheckoutPage() {
               key={item.id}
               className="flex flex-col md:flex-row items-center md:items-center border p-4 rounded-lg"
             >
-             
               <Link href={`/shop/${slugify(item.name)}`}>
                 <div className="w-24 h-24 flex items-center justify-center flex-shrink-0">
-                  <img
+                  <Image
                     src={`/products/${item.image.src}.jpg`}
                     alt={item.name}
+                    width={96}
+                    height={96}
                     className="object-cover w-full h-full rounded-md"
                   />
                 </div>
@@ -122,7 +119,7 @@ export default function CheckoutPage() {
                 <p className="text-sm tracking-tight max-w-[70%] text-justify mx-auto lg:mx-0 md:mx-0">
                   {item.short || "No description available."}
                 </p>
-                <p className="bg-gradient-to-r from-[#e5e5e5ae] to-[#f2f2f2a1] rounded-lg p-1  font-medium tracking-tighter text-md mt-2 lg:max-w-[15%] max-w-[35%] mx-auto lg:mx-0">
+                <p className="bg-gradient-to-r from-[#e5e5e5ae] to-[#f2f2f2a1] rounded-lg p-1 font-medium tracking-tighter text-md mt-2 lg:max-w-[15%] max-w-[35%] mx-auto lg:mx-0">
                   {(item.price * item.quantity).toFixed(2)} €
                 </p>
                 <div className="flex items-center mt-2 space-x-1 justify-end">
@@ -151,14 +148,14 @@ export default function CheckoutPage() {
                       width={24}
                       height={24}
                     />
-                    <span className="ml-2 text-sm tracking-tight ">Delete</span>
+                    <span className="ml-2 text-sm tracking-tight">Delete</span>
                   </button>
                 </div>
               </div>
             </div>
           ))}
           <div className="flex flex-col md:flex-row justify-between items-center mt-6">
-            <p className="bg-gradient-to-r from-[#e5e5e5ae] to-[#f2f2f2a1] rounded-lg p-1  font-medium tracking-tighter text-lg mt-2 lg:max-w-[20%] max-w-[70%] mb-4 lg:mb-0 text-center">
+            <p className="bg-gradient-to-r from-[#e5e5e5ae] to-[#f2f2f2a1] rounded-lg p-1 font-medium tracking-tighter text-lg mt-2 lg:max-w-[20%] max-w-[70%] mb-4 lg:mb-0 text-center">
               Total: {totalPrice.toFixed(2)} €
             </p>
             <button

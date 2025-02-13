@@ -11,11 +11,11 @@ export default function Custom404() {
       </h1>
       <p className="mt-4 text-lg tracking-tight text-black/70">Page Not Found</p>
       <p className="mt-2 text-sm tracking-tight">
-        Math doesn't lie — 98 is always right!
+        Math doesn&apos;t lie — 98 is always right!
       </p>
       <Link
         href="/"
-        className="text-black/80 tracking-tight mt-6 inline-block bg-gradient-to-r from-[#d9d9d9ae] to-[#e6e6e6a1] rounded-[10px] p-2  hover:bg-gradient-to-r hover:from-[#d9d9d9] hover:to-[#e6e6e6] hover:text-black transition duration-600 ease-in-out"
+        className="text-black/80 tracking-tight mt-6 inline-block bg-gradient-to-r from-[#d9d9d9ae] to-[#e6e6e6a1] rounded-[10px] p-2 hover:bg-gradient-to-r hover:from-[#d9d9d9] hover:to-[#e6e6e6] hover:text-black transition duration-600 ease-in-out"
       >
         Return Home
       </Link>
