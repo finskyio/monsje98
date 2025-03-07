@@ -35,7 +35,7 @@ const Footer = () => {
           <div className="text-center text-xs tracking-tight text-white/60 ">
             crafted by{" "}
             <Link
-              href="https://www.finsky.com"
+              href="https://www.finsky.io"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-[#e5e5e527] to-[#f2f2f216] rounded-lg p-1 hover:text-white"
@@ -67,7 +67,7 @@ const Footer = () => {
         <div className="text-center text-xs tracking-tight text-white/60 md:hidden">
           crafted by{" "}
           <Link
-            href="https://www.finsky.com"
+            href="https://www.finsky.io"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-[#e5e5e527] to-[#f2f2f216] rounded-lg p-1 hover:text-white"

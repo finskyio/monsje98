@@ -1,3 +1,4 @@
+import Footer from '../components/Footer';
 import ExpandingPhoto from '../components/Philosophy/ExpandingPhoto';
 import ExpandingText from '../components/Philosophy/ExpandingText';
 import Hero from '../components/Philosophy/Hero';
@@ -10,6 +11,7 @@ export default function PhilosophyPage() {
         <ExpandingText />
       </div>
       <Hero />
+      <Footer />
     </>
   );
 }
