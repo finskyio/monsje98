@@ -32,7 +32,7 @@ const Footer = () => {
               Every image and graphic is entirely my own work.
             </p>
           </div>
-          <div className="text-center text-xs tracking-tight text-white/60 ">
+          <div className="text-center text-xs tracking-tight text-white/60 hidden md:block ">
             crafted by{" "}
             <Link
               href="https://www.finsky.io"
